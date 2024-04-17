@@ -1,15 +1,21 @@
 # Personas_Clustering_technqiue
 
-Projects on Real-Datasets The project aimed to develop an Unsupervised ML model for categorizing university applicants into clusters based on their demographic and behavioral traits. This optimization aimed to bolster the efficiency of the application process and empower UB's Strategic Marketing Department to better engage potential Management Program candidates.
+**1. Project Objective**
+The objective of this project is to develop a persona segmentation model for prospective Master's students. By leveraging clustering and machine learning techniques, the model segments students into distinct personas based on factors influencing their enrollment decisions. This segmentation aids in understanding diverse student needs and preferences, enabling more personalized marketing and communication strategies.
 
-To achieve this, I initially collected relevant data from different University at Buffalo databases and store it into an SQLite database. This streamlined data processing and storage. SQL views were then employed to aggregate data, create new columns, and select pertinent features. Multiple datasets were merged to form an optimized dataset for model training.
+**2. Dataset**
+The dataset includes various attributes such as intent to enroll, English proficiency scores, event participation, GPAs, and standardized test scores from potential students. Data preprocessing involved cleaning, normalization, and reducing dimensionality to focus on the most impactful features.
 
-Managing missing data was a challenge that we addressed by removal or imputation. Numerical fields were normalized for consistency across features. Correlation analysis unveiled interdependencies, aiding in the identification of redundant features.
+**3. Approach**
 
-The data underwent classification into four distinct clusters through Unsupervised Learning, specifically employing the K-means clustering algorithm. This technique effectively grouped similar data points, revealing inherent dataset patterns.
+The methodology encompasses several phases:
 
-To determine the optimal cluster count, two methods were applied: the elbow method and the silhouette visualizer. The elbow method plots cluster variance explained against cluster count, identifying the "elbow" point where variance change stabilizes. The silhouette visualizer utilizes silhouette coefficients to assess data point fit within their clusters.
+- **Data Preprocessing**: Initial cleaning to handle missing data and normalization to scale feature values.
+- **Feature Selection**: Identifying key features that significantly influence student profiles and enrollment decisions.
+- **Clustering for Persona Creation**: Applying clustering algorithms to categorize students into personas based on similarity in characteristics.
+- **Predictive Modeling**: Using a RandomForest classifier to predict the likelihood of enrollment for each persona, enhancing the ability to target specific groups effectively.
+- **Feature Importance Analysis**: Ranking features by their influence on the model to identify which attributes most significantly affect enrollment likelihood and persona characteristics.
 
-Cluster quality was assessed with the Calinski-Harabasz score, gauging inter-cluster separation. This metric confirmed the meaningful distinctiveness of the clusters.
+**4. Results**
 
-In tandem with clustering, the dataset's feature importance was analyzed via the Random Forest classifier. This facilitated the identification of key features for predicting different clusters' important characteristics.
+The clustering effectively identified distinct personas among the student candidates, revealing unique clusters with specific enrollment behaviors and preferences. The predictive model demonstrated good accuracy in forecasting student enrollment decisions, underpinned by a robust analysis of feature importance. These insights are crucial for crafting tailored outreach and engagement strategies that resonate with each student persona.
